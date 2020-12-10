@@ -68,3 +68,7 @@ def main():
         args.desired_outcome)
     print(f"The two numbers are {left} and {right}")
     print(f"The product of these numbers is: {left * right}")
+
+
+if __name__ == "__main__":
+    main()
