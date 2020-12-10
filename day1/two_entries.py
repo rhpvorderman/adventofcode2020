@@ -55,12 +55,11 @@ def find_two_numbers_that_add_to(numbers: Iterable[int],
 def main():
     parser = argparse.ArgumentParser(
         description="Search a list for two numbers that add up to the "
-                    "desired outcome. Returns the numbers and the result of"
-                    "the multiplication.")
+                    "desired outcome. Returns the numbers and their product.")
     parser.add_argument("desired_outcome", type=int,
                         help="The number that two numbers should add up to.")
     parser.add_argument("number_list", type=str,
-                        help="The file with a list of numbers to use. Each"
+                        help="The file with a list of numbers to use. Each "
                              "number should be on its own line.")
     args = parser.parse_args()
     left, right = find_two_numbers_that_add_to(
