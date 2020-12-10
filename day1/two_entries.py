@@ -29,7 +29,7 @@ import itertools
 from typing import Generator, Iterable, Tuple
 
 
-def file_to_integer_list(path) -> Generator[int, None, None]:
+def file_to_integers(path) -> Generator[int, None, None]:
     """
     Converts a file that contains a list of integers to a generator that
     yields these integers.
@@ -64,7 +64,7 @@ def main():
                              "number should be on its own line.")
     args = parser.parse_args()
     left, right = find_two_numbers_that_add_to(
-        file_to_integer_list(args.number_list),
+        file_to_integers(args.number_list),
         args.desired_outcome)
     print(f"The two numbers are {left} and {right}")
     print(f"The product of these numbers is: {left * right}")
